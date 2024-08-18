@@ -1,0 +1,52 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "benchmark/fixtures": true,
+    "fixtures-tmp": true
+  },
+  "eslint.options": {
+    "rulePaths": ["fixtures/rules"]
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jest.jestCommandLine": "pnpm run test",
+  // It is expensive to run the test each time the file to be tested (e.g. `loader.ts`) is saved.
+  // So, run Jest only when the test file (e.g. `loader.test.ts`) is saved.
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-file"
+  },
+  // Do not open vscode-jest's terminal on launch.
+  "jest.showTerminalOnLaunch": false,
+  // Use nightly version tsserver
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
